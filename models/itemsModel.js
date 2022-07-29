@@ -6,7 +6,7 @@ const itemsSchema = mongoose.Schema({
     price:{type:Number ,required:true},
     category:{type:String , required:true},
     image:{type:String , required:true},
-})
+},{timeStamp:true})
 
 const itemModel = mongoose.model('items',itemsSchema);
 
