@@ -9,6 +9,9 @@ const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
+app.use("/", (req, res) => {
+  res.send("Hello World");
+});
 app.use("/api/items", itemsRoute);
 app.use("/api/users", userRoute);
 app.use("/api/bills/", billsRoute);
